@@ -1,0 +1,17 @@
+{
+    "name": "moningheng/composer_test",
+    "description": "专属测试composer打包",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "莫泞衡",
+            "email": "1173874670@qq.com"
+        }
+    ],
+    "require": {},
+	"autoload":{
+		"psr-4":{
+			"code\\controller\\":"code/controller"
+		}
+	}
+}
