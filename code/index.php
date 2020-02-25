@@ -1,4 +1,4 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
-use  code\controller\comment;
-comment::show_info();
+echo time().'<br/>';
+echo strtotime('-1 day').'<br/>';
+echo date('Y-m-d H:i:s',time());
