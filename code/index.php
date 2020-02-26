@@ -1,6 +1,4 @@
 <?php
-echo time().'<br/>';
-
-echo strtotime('-1 day').'<br/>';
-
-echo date('Y-m-d H:i:s',time());
+for ($i = 1; $i < 10; $i++) {
+    echo "数字是：$i<br/>";
+}
