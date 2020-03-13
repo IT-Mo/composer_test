@@ -8,7 +8,7 @@ class Index
 {
     public function index()
     {
-        $data = ['user_name' => '莫泞衡', 'user_age' => 18];
+        $data = ['name' => '莫泞衡', 'password' => '184578'];
         return User::createUser($data);
     }
 
