@@ -14,9 +14,12 @@ class Index
 
     public function login()
     {
-        $name = input('get.user_name', '');
+        $name = input('get.name', '');
         $age = input('get.user_age', 0);
-        if (empty($name)) {
+        $res = User::where('name',$name)->find();
+        var_dump($res);die;
+        //echo $res->getlastSql();die;
+        if (!$res) {
             return '不存在该用户';
         }
         var_dump($name);die;
