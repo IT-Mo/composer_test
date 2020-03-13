@@ -16,8 +16,8 @@ class Index
     {
         $name = input('get.name', '');
         $age = input('get.user_age', 0);
-        $res = User::where('name',$name)->find();
-        var_dump($res);die;
+        $res = User::where('name',$name)->select();
+        echo User::getlastSql();die;
         //echo $res->getlastSql();die;
         if (!$res) {
             return '不存在该用户';
