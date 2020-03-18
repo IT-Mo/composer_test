@@ -1,10 +1,10 @@
 <?php
 
 namespace app\index\controller;
-
+use think\Controller;
 use app\index\model\User;
 
-class Index
+class Index extends Controller
 {
     public function index()
     {
@@ -15,13 +15,9 @@ class Index
     public function login()
     {
         $name = input('get.name', '');
-        $age = input('get.user_age', 0);
-        $res = User::where('name',$name)->select();
-        echo User::getlastSql();die;
-        //echo $res->getlastSql();die;
-        if (!$res) {
-            return '不存在该用户';
+        if(true !== ($result = $this->validate(['name' => $name],'app\index\validate\Index'))){
+            dump($result);die;
         }
-        var_dump($name);die;
+        return '恭喜你，注册审核通过';
     }
 }
